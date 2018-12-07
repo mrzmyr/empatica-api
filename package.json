@@ -1,0 +1,20 @@
+{
+  "name": "empatica-api",
+  "version": "0.1.0",
+  "description": "Unofficial empatica node.js module to access web data",
+  "main": "index.js",
+  "repository": "https://github.com/mrzmyr/empatica-api",
+  "author": "mrzmyr",
+  "license": "MIT",
+  "dependencies": {
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "documentation": "^8.1.2",
+    "readme-generator": "^1.0.1"
+  },
+  "scripts": {
+    "docs": "./node_modules/documentation/bin/documentation.js build lib/** -f md > docs.md",
+    "readme": "./node_modules/readme-generator/cli.js -t template.md"
+  }
+}
