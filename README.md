@@ -26,7 +26,7 @@ const sessions = await empticaApi.getSessions()
 console.log(sessions[0]);
 ```
 
-Check the [examples](examples) directory for more useful basics.
+Check the [examples](examples) directory for more useful basics or use the [full documentation here](docs.md).
 
 ## Contributing
 
