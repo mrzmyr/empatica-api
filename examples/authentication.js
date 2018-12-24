@@ -9,5 +9,4 @@ const credentials = require('./credentials.json');
   })
 
   await empticaApi.authenticate()
-
 })()

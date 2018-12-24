@@ -1,6 +1,5 @@
 const EmpticaApi = require('../');
 const credentials = require('./credentials.json');
-const moment = require('moment');
 
 (async () => {
 

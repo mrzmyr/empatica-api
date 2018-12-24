@@ -1,6 +1,5 @@
 const EmpticaApi = require('../');
 const credentials = require('./credentials.json');
-const moment = require('moment');
 
 (async () => {
 
@@ -11,5 +10,4 @@ const moment = require('moment');
 
   await empticaApi.authenticate()
   const eda = await empticaApi.deleteSession(592748)
-  
 })()
