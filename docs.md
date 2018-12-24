@@ -110,7 +110,7 @@ Deletes a session
 ### Examples
 
 ```javascript
-await empticaApi.downloadSession(592760)
+await empticaApi.deleteSession(592760)
 ```
 
 Returns **[Promise][19]** 
