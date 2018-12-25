@@ -12,12 +12,15 @@
 -   [getSession][8]
     -   [Parameters][9]
     -   [Examples][10]
--   [downloadSession][11]
+-   [getSessionData][11]
     -   [Parameters][12]
     -   [Examples][13]
--   [deleteSession][14]
+-   [downloadSession][14]
     -   [Parameters][15]
     -   [Examples][16]
+-   [deleteSession][17]
+    -   [Parameters][18]
+    -   [Examples][19]
 
 ## constructor
 
@@ -25,7 +28,7 @@ EmpaticaApi constructor
 
 ### Parameters
 
--   `options` **[Array][17]** Options holding the authentication data
+-   `options` **[Array][20]** Options holding the authentication data
 
 ### Examples
 
@@ -36,7 +39,7 @@ const empaticaApi = new EmpaticaApi({
 })
 ```
 
-Returns **[Object][18]** Returns a `EmpaticaApi` instance
+Returns **[Object][21]** Returns a `EmpaticaApi` instance
 
 ## authenticate
 
@@ -48,7 +51,7 @@ Authentication with the api endpoint to get session cookies, make sure to authen
 await empticaApi.authenticate()
 ```
 
-Returns **[Promise][19]** Resolves with the user id
+Returns **[Promise][22]** Resolves with the user id
 
 ## getSessions
 
@@ -63,24 +66,40 @@ console.log(sessions[0]);
 // { id: '578634', start_time: '1541950248', duration: '70847', device_id: 'c004bc', label: '2588', device: 'E4 2.2', status: '0', exit_code: '0' }
 ```
 
-Returns **[Promise][19]** resolves to json with all sessions
+Returns **[Promise][22]** resolves to json with all sessions
 
 ## getSession
 
-Get data for specific session by type (`temp`, `eda`, `ibi`, `bpv`, `acc`)
+Gets details about a session (but not the data itself, see `getSessionData`)
 
 ### Parameters
 
--   `id` **([Number][20] \| [String][21])** session id
--   `type` **[String][21]** type of the data (`temp`, `eda`, `ibi`, `bpv`, `acc`)
+-   `id` **([Number][23] \| [String][24])** session id
 
 ### Examples
 
 ```javascript
-const eda = await empticaApi.getSession(592760, 'eda')
+await empticaApi.getSession(592760)
 ```
 
-Returns **[Promise][19]** resolves to json with the session `id`, `type`, `data` (array of all data points)
+Returns **[Promise][22]** resolves to json with session details
+
+## getSessionData
+
+Get data for specific session by type (`temp`, `eda`, `ibi`, `batt`, `bpv`, `accX`, `accY`, `accZ`)
+
+### Parameters
+
+-   `id` **([Number][23] \| [String][24])** session id
+-   `type` **[String][24]** type of the data
+
+### Examples
+
+```javascript
+const eda = await empticaApi.getSessionData(592760, 'eda')
+```
+
+Returns **[Promise][22]** resolves to json with the session `id`, `type`, `data` (array of all data points)
 
 ## downloadSession
 
@@ -88,7 +107,7 @@ Download `.zip` folder for a whole session (usually accessed by the download but
 
 ### Parameters
 
--   `id` **([Number][20] \| [String][21])** session id
+-   `id` **([Number][23] \| [String][24])** session id
 
 ### Examples
 
@@ -97,7 +116,7 @@ const data = await empticaApi.downloadSession(592760, './session.zip')
 fs.writeFileSync('./session.zip', data, 'binary')
 ```
 
-Returns **[Promise][19]** resolves to binary data
+Returns **[Promise][22]** resolves to binary data
 
 ## deleteSession
 
@@ -105,7 +124,7 @@ Deletes a session
 
 ### Parameters
 
--   `id` **([Number][20] \| [String][21])** session id
+-   `id` **([Number][23] \| [String][24])** session id
 
 ### Examples
 
@@ -113,7 +132,7 @@ Deletes a session
 await empticaApi.deleteSession(592760)
 ```
 
-Returns **[Promise][19]** 
+Returns **[Promise][22]** 
 
 [1]: #constructor
 
@@ -135,24 +154,30 @@ Returns **[Promise][19]**
 
 [10]: #examples-3
 
-[11]: #downloadsession
+[11]: #getsessiondata
 
 [12]: #parameters-2
 
 [13]: #examples-4
 
-[14]: #deletesession
+[14]: #downloadsession
 
 [15]: #parameters-3
 
 [16]: #examples-5
 
-[17]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[17]: #deletesession
 
-[18]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[18]: #parameters-4
 
-[19]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[19]: #examples-6
 
-[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[20]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[21]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[22]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+[23]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[24]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String

@@ -10,6 +10,6 @@ const credentials = require('./credentials.json');
 
   await empticaApi.authenticate()
   const sessions = await empticaApi.getSessions()
-  const session_details = await empticaApi.getSession(sessions[0].id)
-  console.log(session_details);
+  const data = await empticaApi.getSessionData(sessions[0].id, 'temp')
+  console.log(data);
 })()
