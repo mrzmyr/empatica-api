@@ -86,7 +86,7 @@ Returns **[Promise][22]** resolves to json with session details
 
 ## getSessionData
 
-Get data for specific session by type (`temp`, `eda`, `ibi`, `batt`, `bpv`, `accX`, `accY`, `accZ`)
+Get data for specific session by type (`temp`, `eda`, `ibi`, `batt`, `bvp`, `accX`, `accY`, `accZ`)
 
 ### Parameters
 
