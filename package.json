@@ -1,6 +1,6 @@
 {
   "name": "empatica-api",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Unofficial empatica node.js module to access web data",
   "main": "index.js",
   "repository": "https://github.com/mrzmyr/empatica-api",
