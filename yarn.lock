@@ -2027,16 +2027,6 @@ faye-websocket@~0.10.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
-file-cookie-store@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/file-cookie-store/-/file-cookie-store-0.2.1.tgz#48d3d4d97eebe81d7b9c5f02b52f7d3518736cbe"
-  integrity sha1-SNPU2X7r6B17nF8CtS99NRhzbL4=
-  dependencies:
-    lockfile "~1.0.0"
-    punycode "~1.2.3"
-    q "~1.0.1"
-    tough-cookie "~2.0.0"
-
 file-name@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/file-name/-/file-name-0.1.0.tgz#12b122f120f9c34dbc176c1ab81a548aced6def7"
@@ -3071,13 +3061,6 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lockfile@~1.0.0:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/lockfile/-/lockfile-1.0.4.tgz#07f819d25ae48f87e538e6578b6964a4981a5609"
-  integrity sha512-cvbTwETRfsFh4nHsL1eGWapU1XFi5Ot9E85sWAwia7Y7EgB7vfqcZhTKZ+l7hCGxSPoushMv5GKhT5PdLv03WA==
-  dependencies:
-    signal-exit "^3.0.2"
-
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
@@ -4016,16 +3999,6 @@ punycode@^1.4.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
   integrity sha1-wNWmOycYgArY4esPpSachN1BhF4=
 
-punycode@~1.2.3:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.2.4.tgz#54008ac972aec74175def9cba6df7fa9d3918740"
-  integrity sha1-VACKyXKux0F13vnLpt9/qdORh0A=
-
-q@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/q/-/q-1.0.1.tgz#11872aeedee89268110b10a718448ffb10112a14"
-  integrity sha1-EYcq7t7okmgRCxCnGESP+xARKhQ=
-
 qs@^6.4.0:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
@@ -4589,7 +4562,7 @@ shebang-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
 
-signal-exit@^3.0.0, signal-exit@^3.0.2:
+signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
@@ -5028,7 +5001,7 @@ tough-cookie-filestore@^0.0.1:
   dependencies:
     tough-cookie "~0.12.1"
 
-tough-cookie@>=2.3.3, tough-cookie@^2.5.0:
+tough-cookie@>=2.3.3:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
   integrity sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==
@@ -5042,11 +5015,6 @@ tough-cookie@~0.12.1:
   integrity sha1-giDH4hq9WxPZaAQlS9WoHr8sfWI=
   dependencies:
     punycode ">=0.2.0"
-
-tough-cookie@~2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.0.0.tgz#41ce08720b35cf90beb044dd2609fb19e928718f"
-  integrity sha1-Qc4Icgs1z5C+sETdJgn7GekocY8=
 
 tough-cookie@~2.4.3:
   version "2.4.3"
