@@ -8,6 +8,8 @@ const credentials = require('./credentials.json');
     password: credentials.password
   })
 
-  await empticaApi.authenticate()
-  const eda = await empticaApi.deleteSession(592748)
+  const { userId } await empticaApi.authenticate()
+  const sessions = await empticaApi.getSessions(userId)
+  const eda = await empticaApi.deleteSession(sessions[0].id)
+
 })()

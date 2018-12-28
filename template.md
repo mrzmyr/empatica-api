@@ -2,6 +2,8 @@
 
 > <%= description %>
 
+**Warning:** This module is under development, breaking changes should be expected
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/)
@@ -13,17 +15,16 @@ $ npm i <%= name %> --save
 ## Usage
 
 ```js
-const credentials = require('./credentials.json');
-
 const EmpaticaApi = require('<%= name %>');
 const empticaApi = new EmpticaApi({
-  username: credentials.username,
-  password: credentials.password
+  username: 'your_empatica_email@example.com'
+  password: 'your_empatica_password'
 })
 
-await empticaApi.authenticate()
-const sessions = await empticaApi.getSessions()
+const { userId } = await empticaApi.authenticate()
+const sessions = await empticaApi.getSessions(userId)
 console.log(sessions[0]);
+// { id: '578634', start_time: '1541950248', duration: '70847', device_id: 'c004bc', label: '2588', device: 'E4 2.2', status: '0', exit_code: '0' }
 ```
 
 Check the [examples](examples) directory for more useful basics or use the [full documentation here](docs.md).
@@ -31,13 +32,5 @@ Check the [examples](examples) directory for more useful basics or use the [full
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](<%= bugs.url %>)
 
-## Author
-
-**<%= author.name %>**
-
-+ [github/mrzmyr](https://github.com/mrzmyr)
-+ [twitter/mrzmyr](http://twitter.com/mrzmyr)
-
 ## License
-Copyright © <%= year() %> [<%= author.name %>](<%= author.url %>)
 Licensed under the <%= license || licenses.join(', ') %> license.

@@ -7,11 +7,14 @@
   "author": "mrzmyr",
   "license": "MIT",
   "dependencies": {
-    "request-promise-native": "^1.0.5"
+    "file-cookie-store": "^0.2.1",
+    "request-promise-native": "^1.0.5",
+    "tough-cookie-filestore": "^0.0.1"
   },
   "devDependencies": {
     "documentation": "^8.1.2",
-    "readme-generator": "^1.0.1"
+    "readme-generator": "^1.0.1",
+    "tough-cookie": "^2.5.0"
   },
   "scripts": {
     "docs": "./node_modules/documentation/bin/documentation.js build lib/** -f md > docs.md",

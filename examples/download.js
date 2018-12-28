@@ -9,8 +9,8 @@ const fs = require('fs');
     password: credentials.password
   })
 
-  await empticaApi.authenticate()
-  const sessions = await empticaApi.getSessions()
+  const { userId } await empticaApi.authenticate()
+  const sessions = await empticaApi.getSessions(userId)
   const data = await empticaApi.downloadSession(sessions[0], './session.zip')
   fs.writeFileSync('./session.zip', data, 'binary')
 
