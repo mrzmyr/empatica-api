@@ -2,6 +2,8 @@
 
 > Unofficial empatica node.js module to access web data
 
+**Warning:** This module is under development, breaking changes should be expected
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/)
