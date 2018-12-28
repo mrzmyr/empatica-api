@@ -15,7 +15,6 @@
   },
   "scripts": {
     "docs": "./node_modules/documentation/bin/documentation.js build lib/** -f md > docs.md",
-    "readme": "./node_modules/readme-generator/cli.js -t template.md",
-    "bump": "yarn version --patch"
+    "readme": "./node_modules/readme-generator/cli.js -t template.md"
   }
 }
