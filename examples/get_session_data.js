@@ -8,8 +8,8 @@ const credentials = require('./credentials.json');
     password: credentials.password
   })
 
-  const { userId } await empticaApi.authenticate()
+  const { userId } = await empticaApi.authenticate()
   const sessions = await empticaApi.getSessions(userId)
-  const data = await empticaApi.getSessionData(sessions[0].id, 'temp')
+  const data = await empticaApi.getSessionData(sessions[0].id, 'acc')
   console.log(data);
 })()
